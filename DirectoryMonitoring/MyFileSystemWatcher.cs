@@ -9,6 +9,7 @@ namespace DirectoryMonitoring
 {
     public class MyFileSystemWatcher : FileSystemWatcher
     {
+        private string fname;
         public MyFileSystemWatcher()
         {
             Init();
@@ -40,14 +41,22 @@ namespace DirectoryMonitoring
 
         public void Watcher_Created(object source, FileSystemEventArgs inArgs)
         {
-            Log.WriteLine( inArgs.FullPath);
-           
+            if (fname != inArgs.FullPath)
+            {
+                Log.WriteLine(inArgs.FullPath);
+                fname = inArgs.FullPath;
+            }
+
 
         }
 
         public void Watcher_Changed(object sender, FileSystemEventArgs inArgs)
         {
-            Log.WriteLine(inArgs.FullPath);
+            if (fname != inArgs.FullPath)
+            {
+                Log.WriteLine(inArgs.FullPath);
+                fname = inArgs.FullPath;
+            }
         }
 
         public void Watcher_Deleted(object sender, FileSystemEventArgs inArgs)

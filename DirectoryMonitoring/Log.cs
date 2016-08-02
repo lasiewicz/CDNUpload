@@ -50,6 +50,7 @@ namespace DirectoryMonitoring
 
         public static void WriteLine(String inLogMessage)
         {
+            Job.Instance.InJob = true;
             Log.Instance.WriteLineToLog(inLogMessage);
         }
 

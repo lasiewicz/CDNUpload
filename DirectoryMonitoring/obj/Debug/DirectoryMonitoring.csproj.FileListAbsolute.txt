@@ -1,9 +1,0 @@
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\DirectoryMonitoring.exe.config
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\DirectoryMonitoring.exe
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\DirectoryMonitoring.pdb
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csprojResolveAssemblyReference.cache
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.ProjectInstaller.resources
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.DirectoryMonitoringService.resources
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csproj.GenerateResource.Cache
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.exe
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.pdb
