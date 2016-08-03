@@ -1,6 +1,6 @@
 ﻿namespace DirectoryMonitoring
 {
-    partial class DirectoryMonitoringService
+    partial class CNDUploadFolderWatcherService
     {
         /// <summary> 
         /// Required designer variable.

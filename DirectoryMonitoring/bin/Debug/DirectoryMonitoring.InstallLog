@@ -1,0 +1,8 @@
+﻿Uninstalling assembly 'C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\DirectoryMonitoring.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\DirectoryMonitoring.InstallLog
+   assemblypath = C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\DirectoryMonitoring.exe
+Removing EventLog source DirectoryMonitoringService.
+Service DirectoryMonitoringService is being removed from the system...
+Service DirectoryMonitoringService was successfully removed from the system.

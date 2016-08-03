@@ -4,7 +4,7 @@ using System.ServiceProcess;
 
 namespace DirectoryMonitoring
 {
-    public partial class DirectoryMonitoringService : ServiceBase
+    public partial class CNDUploadFolderWatcherService : ServiceBase
     {
         protected FileSystemWatcher Watcher;
         
@@ -14,11 +14,11 @@ namespace DirectoryMonitoring
         string PathToFolder = @"C:\f2";
         private bool justwrotestuff;
         private System.Threading.Timer IntervalTimer;
-        public DirectoryMonitoringService()
+        public CNDUploadFolderWatcherService()
         {
            
             Log.Instance.LogPath = @"C:\Logs";
-            Log.Instance.LogFileName = "DirectoryMonitoring";
+            Log.Instance.LogFileName = "CNDUploadFolderWatcher";
             Watcher = new MyFileSystemWatcher(PathToFolder);
         }
 
@@ -43,6 +43,7 @@ namespace DirectoryMonitoring
                 {
                     string wtext = "job" + Job.Instance.Jobnumber;
                     Log.WriteLine(wtext);
+                    justwrotestuff = false;
                 }
             }
 

@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.InstallLog
+   assemblypath = C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.exe
+Installing service CNDUploadFolderWatcherService...
+Service CNDUploadFolderWatcherService has been successfully installed.
+Creating EventLog source CNDUploadFolderWatcherService in log Application...
+Committing assembly 'C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.InstallLog
+   assemblypath = C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.exe
