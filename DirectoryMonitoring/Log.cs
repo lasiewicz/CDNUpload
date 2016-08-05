@@ -47,6 +47,10 @@ namespace DirectoryMonitoring
             Writer.Write(inLogMessage);
             Writer.Flush();
         }
+        public void Clearlog()
+        {
+            Writer.Close();
+        }
 
         public static void WriteLine(String inLogMessage)
         {

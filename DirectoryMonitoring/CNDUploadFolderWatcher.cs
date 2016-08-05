@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Runtime.CompilerServices;
 using System.ServiceProcess;
+using System.Windows.Forms;
 
 namespace DirectoryMonitoring
 {
@@ -20,12 +22,13 @@ namespace DirectoryMonitoring
             Log.Instance.LogPath = @"C:\Logs";
             Log.Instance.LogFileName = "CNDUploadFolderWatcher";
             Watcher = new MyFileSystemWatcher(PathToFolder);
+           
         }
 
         protected override void OnStart(string[] args)
         {
             IntervalTimer = new System.Threading.Timer(new System.Threading.TimerCallback(IntervalTimer_Elapsed), null, 60000, 60000);
-            Log.WriteLine("start");
+           // Log.WriteLine("start");
             Job.Instance.CreateNewNum();
         }
 
@@ -41,9 +44,24 @@ namespace DirectoryMonitoring
             {
                 if (Job.Instance.InJob == false)
                 {
+                    Job.Instance.CreateNewNum();
                     string wtext = "job" + Job.Instance.Jobnumber;
-                    Log.WriteLine(wtext);
+                   // Log.WriteLine(wtext);
+                    string newfilepath = "c:\\jobs\\" + Job.Instance.Jobnumber + ".txt";
+                    string blankfilepath = Log.Instance.LogPath + "\\blanklog" + ".txt";
+                    try
+                    {
+                        File.Copy(Log.Instance.LogFullPath, newfilepath);
+                        // WRITE METHOD TO WRITE ARRAY TO LOG
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                        
+                        Log.WriteLine(ex.ToString());
+                    }
                     justwrotestuff = false;
+                    Job.Instance.InJob = false;
                 }
             }
 
