@@ -30,6 +30,7 @@ namespace DirectoryMonitoring
             Log.Instance.LogPath = @logfolder;
             Log.Instance.LogFileName = "CNDUploadFolderWatcher";
             Job.Instance.Jobsdir = appSettings.Settings["jobs"].Value;
+            Job.Instance.logdir = logfolder;
             Watcher = new MyFileSystemWatcher(PathToFolder);
            
         }

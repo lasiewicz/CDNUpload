@@ -18,6 +18,7 @@ namespace DirectoryMonitoring
         public string TooEmail;
         public string[] fnames = new string[1000000];
         public int fnameindex;
+        public string logdir;
         public Boolean Activity;
         public static Job Instance = new Job();
         // string Jobsdir=ConfigurationManager.AppSettings["jobs"].ToString();
@@ -30,7 +31,7 @@ namespace DirectoryMonitoring
 
         public void CreateNewNum()
         {
-            string newfilepath = Jobsdir +" \\" + "Jobnumber" + ".txt";
+            string newfilepath = logdir +" \\" + "Jobnumber" + ".txt";
             Jobnumber = "1";
             using (System.IO.StreamReader file =
                 new System.IO.StreamReader(@newfilepath))
