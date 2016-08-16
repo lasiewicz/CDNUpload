@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
 using System.Net.Mail;
-using System.Windows.Forms;
 
 namespace DirectoryMonitoring
 {
@@ -67,6 +59,7 @@ namespace DirectoryMonitoring
             string subject = "CDN Upload Job " + Jobnumber + " created";
             string test = SendEmail(TooEmail,subject,Mes);
             Log.WriteLine(test);
+            Job.Instance.fnameindex = 0;
 
         }
 

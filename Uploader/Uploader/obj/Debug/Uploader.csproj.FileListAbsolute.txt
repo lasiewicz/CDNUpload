@@ -1,0 +1,11 @@
+c:\code\Uploader\Uploader\bin\Debug\Uploader.exe.config
+c:\code\Uploader\Uploader\bin\Debug\Uploader.exe
+c:\code\Uploader\Uploader\bin\Debug\Uploader.pdb
+c:\code\Uploader\Uploader\bin\Debug\System.Net.FtpClient.dll
+c:\code\Uploader\Uploader\bin\Debug\System.Net.FtpClient.xml
+c:\code\Uploader\Uploader\obj\Debug\Uploader.csprojResolveAssemblyReference.cache
+c:\code\Uploader\Uploader\obj\Debug\Uploader.Uploader.resources
+c:\code\Uploader\Uploader\obj\Debug\Uploader.Properties.Resources.resources
+c:\code\Uploader\Uploader\obj\Debug\Uploader.csproj.GenerateResource.Cache
+c:\code\Uploader\Uploader\obj\Debug\Uploader.exe
+c:\code\Uploader\Uploader\obj\Debug\Uploader.pdb
