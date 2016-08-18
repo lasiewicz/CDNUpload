@@ -1,9 +1,0 @@
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.exe.config
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.exe
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.pdb
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csprojResolveAssemblyReference.cache
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.ProjectInstaller.resources
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.CNDUploadFolderWatcherService.resources
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csproj.GenerateResource.Cache
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CNDUploadFolderWatcher.exe
-C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CNDUploadFolderWatcher.pdb

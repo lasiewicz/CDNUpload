@@ -44,12 +44,12 @@ namespace DirectoryMonitoring
 
         public void Spitoutnewfile()
         {
-            string newfilepath = Jobsdir + " \\" + this.Jobnumber + ".txt";
+            string newfilepath = Jobsdir + " \\" + this.Jobnumber ;
             string Mes = "";
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(@newfilepath))
             {
-                for (int x = 1; x <= this.fnameindex; x++)
+                for (int x = 0; x <= this.fnameindex; x++)
                 {
                     file.WriteLine(this.fnames[x]);
                     Mes = Mes + this.fnames[x] + (char) 13;
