@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.ServiceProcess;
-using System.Windows.Forms;
 using System.Configuration;
 namespace DirectoryMonitoring
 {

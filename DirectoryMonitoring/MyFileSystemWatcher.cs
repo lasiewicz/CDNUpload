@@ -61,12 +61,12 @@ namespace DirectoryMonitoring
 
         public void Watcher_Deleted(object sender, FileSystemEventArgs inArgs)
         {
-           // Log.WriteLine("File deleted: " + inArgs.FullPath);
+            // Log.WriteLine("File deleted: " + inArgs.FullPath);
         }
 
         public void Watcher_Renamed(object sender, RenamedEventArgs inArgs)
         {
-          //  Log.WriteLine("File renamed: " + inArgs.OldFullPath + ", New name: " + inArgs.FullPath);
+            //  Log.WriteLine("File renamed: " + inArgs.OldFullPath + ", New name: " + inArgs.FullPath);
         }
     }
 }

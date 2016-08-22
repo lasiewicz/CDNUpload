@@ -51,10 +51,25 @@ namespace DirectoryMonitoring
 
         public static void WriteLine(String inLogMessage)
         {
+           
             Job.Instance.InJob = true;
-            Job.Instance.fnames[Job.Instance.fnameindex] = inLogMessage;
-            Job.Instance.fnameindex++;
-            Log.Instance.WriteLineToLog(inLogMessage);
+            bool Toprocess = true;
+    
+            for (int x = 0; x < Job.Instance.fnameindex; x++)
+            {
+                bool areEqual = String.Equals(Job.Instance.fnames[x], inLogMessage, StringComparison.Ordinal);
+                if (areEqual)
+                {
+                    Toprocess = false;
+                }
+            }
+            if (Toprocess)
+            {
+                Job.Instance.fnames[Job.Instance.fnameindex] = inLogMessage;
+                Job.Instance.fnameindex++;
+                Log.Instance.WriteLineToLog(inLogMessage);
+
+            }
         }
 
         public static void Write(String inLogMessage)

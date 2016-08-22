@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Job.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="BMail.cs" />
     <Compile Include="MyFileSystemWatcher.cs">
       <SubType>Component</SubType>
     </Compile>

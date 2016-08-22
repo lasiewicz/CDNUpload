@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Net.Mail;
+
 
 namespace DirectoryMonitoring
 {
@@ -15,6 +15,7 @@ namespace DirectoryMonitoring
         public static Job Instance = new Job();
         // string Jobsdir=ConfigurationManager.AppSettings["jobs"].ToString();
         public string Jobsdir;
+        public BMail MailObject = new BMail();
         public Job()
         {
 
@@ -39,7 +40,9 @@ namespace DirectoryMonitoring
             {
                 file.WriteLine(this.Jobnumber);
             }
-        
+            Job.Instance.fnameindex = 0;
+            Job.Instance.fnames[0] = "";
+
         }
 
         public void Spitoutnewfile()
@@ -52,43 +55,20 @@ namespace DirectoryMonitoring
                 for (int x = 0; x <= this.fnameindex; x++)
                 {
                     file.WriteLine(this.fnames[x]);
+                    
                     Mes = Mes + this.fnames[x] + (char) 13;
+                  
                 }
                 file.Close();
             }
             string subject = "CDN Upload Job " + Jobnumber + " created";
-            string test = SendEmail(TooEmail,subject,Mes);
+            string test = MailObject.SendEmail(TooEmail,subject,Mes);
             Log.WriteLine(test);
             Job.Instance.fnameindex = 0;
 
         }
 
-        protected string SendEmail(string toAddress, string subject, string body)
-        {
-            string result = "Message Sent Successfully..!!";
-            string senderID = "DeluxeMediaWrap@gmail.com";// use sender’s email id here..
-            const string senderPassword = "deluxemedia"; // sender password here…
-            try
-            {
-                SmtpClient smtp = new SmtpClient
-                {
-                    Host = "smtp.gmail.com", // smtp server address here…
-                    Port = 587,
-                    EnableSsl = true,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    Credentials = new System.Net.NetworkCredential(senderID, senderPassword),
-                    Timeout = 30000,
-                };
-                MailMessage message = new MailMessage(senderID, toAddress, subject, body);
-                smtp.Send(message);
-            }
-            catch (Exception ex)
-            {
-                result = ex.ToString();
-            }
-            return result;
-        }
-
+      
 
 
     }

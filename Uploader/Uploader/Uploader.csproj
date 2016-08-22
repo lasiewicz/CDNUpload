@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.FtpClient">
       <HintPath>..\System.Net.FtpClient.dll</HintPath>
@@ -49,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BMail.cs" />
+    <Compile Include="FileCompare.cs" />
     <Compile Include="Ftpstuff.cs" />
     <Compile Include="Jobfiles.cs" />
     <Compile Include="Log.cs" />

@@ -9,3 +9,14 @@ c:\code\Uploader\Uploader\obj\Debug\Uploader.Properties.Resources.resources
 c:\code\Uploader\Uploader\obj\Debug\Uploader.csproj.GenerateResource.Cache
 c:\code\Uploader\Uploader\obj\Debug\Uploader.exe
 c:\code\Uploader\Uploader\obj\Debug\Uploader.pdb
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\bin\Debug\Uploader.exe.config
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.csprojResolveAssemblyReference.cache
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.Uploader.resources
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.Properties.Resources.resources
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.csproj.GenerateResource.Cache
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\bin\Debug\Uploader.exe
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\bin\Debug\Uploader.pdb
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\bin\Debug\System.Net.FtpClient.dll
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\bin\Debug\System.Net.FtpClient.xml
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.exe
+C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.pdb
