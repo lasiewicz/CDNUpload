@@ -40,26 +40,28 @@ namespace Uploader
             Ftpstuff.Instance.Login = appSettings.Settings["login"].Value;
             Ftpstuff.Instance.Password= appSettings.Settings["password"].Value;
             Ftpstuff.Instance.Host = appSettings.Settings["host"].Value;
-            TooEmail = appSettings.Settings["Sendto"].Value;
+            Ftpstuff.Instance.TooEmail = appSettings.Settings["Sendto"].Value;
+            Ftpstuff.Instance.jobroot = appSettings.Settings["jobs"].Value;
+            Ftpstuff.Instance.searchroot = appSettings.Settings["searchroot"].Value;
 
-         
+
 
             if (args.Length ==2)
 
             {
                 Log.Instance.LogFileName = "CNDUploader";
-                jobnumber = args[1];
-                getjob(false);
+                Ftpstuff.Instance.jobnumber = args[1];
+                Ftpstuff.Instance.getjob(false);
             }
 
             if (args.Length == 3)
 
             {
                 Log.Instance.LogFileName = "FileCompare";
-                jobnumber = args[1];
-                getjob(true);
+                Ftpstuff.Instance.jobnumber = args[1];
+                Ftpstuff.Instance.getjob(true);
             }
-            Application.Exit();
+            
 
         }
 

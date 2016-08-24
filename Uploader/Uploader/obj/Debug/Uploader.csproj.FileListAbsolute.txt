@@ -30,3 +30,4 @@ C:\DirectoryMonitoring\Uploader\Uploader\bin\Debug\System.Net.FtpClient.xml
 C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.Uploader.resources
 C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.Properties.Resources.resources
 C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.csproj.GenerateResource.Cache
+C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.csprojResolveAssemblyReference.cache

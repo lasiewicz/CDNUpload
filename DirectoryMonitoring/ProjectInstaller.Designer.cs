@@ -40,7 +40,7 @@
             // serviceInstaller1
             // 
             this.serviceInstaller1.Description = "A service that monitors changes in a directory.";
-            this.serviceInstaller1.ServiceName = "CNDUploadFolderWatcherService";
+            this.serviceInstaller1.ServiceName = "CDNUploadFolderWatcherService";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DirectoryMonitoring</RootNamespace>
-    <AssemblyName>CNDUploadFolderWatcher</AssemblyName>
+    <AssemblyName>CDNUploadFolderWatcher</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -58,11 +58,11 @@
     <Compile Include="ProjectInstaller.Designer.cs">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="CNDUploadFolderWatcher.cs">
+    <Compile Include="CDNUploadFolderWatcher.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CNDUploadFolderWatcher.Designer.cs">
-      <DependentUpon>CNDUploadFolderWatcher.cs</DependentUpon>
+    <Compile Include="CDNUploadFolderWatcher.Designer.cs">
+      <DependentUpon>CDNUploadFolderWatcher.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +74,8 @@
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CNDUploadFolderWatcher.resx">
-      <DependentUpon>CNDUploadFolderWatcher.cs</DependentUpon>
+    <EmbeddedResource Include="CDNUploadFolderWatcher.resx">
+      <DependentUpon>CDNUploadFolderWatcher.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

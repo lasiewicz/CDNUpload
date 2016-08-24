@@ -4,7 +4,7 @@ using System.ServiceProcess;
 using System.Configuration;
 namespace DirectoryMonitoring
 {
-    public partial class CNDUploadFolderWatcherService : ServiceBase
+    public partial class CDNUploadFolderWatcherService : ServiceBase
     {
         protected FileSystemWatcher Watcher;
 
@@ -15,7 +15,7 @@ namespace DirectoryMonitoring
         private string PathToFolder;
         private bool justwrotestuff;
         private System.Threading.Timer IntervalTimer;
-        public CNDUploadFolderWatcherService()
+        public CDNUploadFolderWatcherService()
         {
     
             System.Configuration.Configuration config =

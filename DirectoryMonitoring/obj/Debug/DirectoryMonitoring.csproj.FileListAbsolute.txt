@@ -7,3 +7,12 @@ C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\Di
 C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CNDUploadFolderWatcher.exe
 C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CNDUploadFolderWatcher.pdb
 C:\Users\lasiewiw\Downloads\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CNDUploadFolderWatcher.pdb
+C:\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CDNUploadFolderWatcher.exe.config
+C:\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CDNUploadFolderWatcher.exe
+C:\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CDNUploadFolderWatcher.pdb
+C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csprojResolveAssemblyReference.cache
+C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.ProjectInstaller.resources
+C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csproj.GenerateResource.Cache
+C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CDNUploadFolderWatcher.exe
+C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CDNUploadFolderWatcher.pdb
+C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.CDNUploadFolderWatcherService.resources

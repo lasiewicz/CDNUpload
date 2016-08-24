@@ -17,7 +17,7 @@ namespace DirectoryMonitoring
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[] 
             { 
-                new CNDUploadFolderWatcherService() 
+                new CDNUploadFolderWatcherService() 
             };
             ServiceBase.Run(ServicesToRun);
         }
