@@ -5,7 +5,7 @@ public class BMail
     public string SendEmail(string toAddress, string subject, string body)
     {
         string result = "Message Sent Successfully..!!";
-        string senderID = "DeluxeMediaWrap@gmail.com";// use sender’s email id here..
+        string senderID = "DeluxeJenkins@gmail.com";// use sender’s email id here..
         const string senderPassword = "deluxemedia"; // sender password here…
         try
         {
