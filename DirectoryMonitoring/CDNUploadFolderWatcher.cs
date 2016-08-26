@@ -47,7 +47,7 @@ namespace DirectoryMonitoring
             IntervalTimer = null;
         }
         private void IntervalTimer_Elapsed(object state)
-        {   // Do the thing that needs doing every few minutes...
+        {   
             if (justwrotestuff)
             {
                 if (Job.Instance.InJob == false)
