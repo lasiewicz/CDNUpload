@@ -4,6 +4,7 @@ using System.IO;
 using DirectoryMonitoring;
 using System.Net;
 using System.Threading;
+using WinSCP;
 
 namespace Uploader
 {
@@ -22,7 +23,65 @@ namespace Uploader
         public string jobroot;
         public BMail MailObject = new BMail();
               
+        public void test()
+        {
+      
+            try
+            {
+                // Setup session options
+                /*
+                SessionOptions sessionOptions = new SessionOptions
+                {
+                    Protocol = Protocol.Sftp,
+                    HostName = "ushens.upload.akamai.com",
+                    UserName = "sshacs",
+                    Password = "",
+                    SshHostKeyFingerprint = "ssh-dss 1024 ee:33:bd:ac:7b:6e:bd:0b:60:6e:49:20:56:cb:00:d3",
+                    SshPrivateKeyPath = "C:\\Users\\lasiewiw\\Desktop\\deluxe_xfer_putty_priv.ppk"
+                };
+                */
+                SessionOptions sessionOptions = new SessionOptions
+                {
+                    Protocol = Protocol.Ftp,
+                    HostName = "deluxdigi-2.upload.llnw.net",
+                    UserName = "deluxdigi-ht",
+                    Password = "g7tz8x"
+                  //  SshHostKeyFingerprint = "ssh-dss 1024 ee:33:bd:ac:7b:6e:bd:0b:60:6e:49:20:56:cb:00:d3",
+                   // SshPrivateKeyPath = "C:\\Users\\lasiewiw\\Desktop\\deluxe_xfer_putty_priv.ppk"
+                };
 
+                using (Session session = new Session())
+                {
+                    // Connect
+                    session.Open(sessionOptions);
+
+                    // Upload files
+                    TransferOptions transferOptions = new TransferOptions();
+                    transferOptions.TransferMode = TransferMode.Binary;
+
+                    TransferOperationResult transferResult;
+                    transferResult = session.PutFiles(@"d:\toupload\*", "/home/user/", false, transferOptions);
+
+                    // Throw on any error
+                    transferResult.Check();
+
+                    // Print results
+                    foreach (TransferEventArgs transfer in transferResult.Transfers)
+                    {
+                        Console.WriteLine("Upload of {0} succeeded", transfer.FileName);
+                    }
+                }
+
+               // return 0;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e);
+                Log.Instance.WriteLineToLog(e.ToString());
+              //  return 1;
+            }
+        }
+    
         public void getjob(bool compare)
         {
             string fc = "";

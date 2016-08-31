@@ -17,27 +17,50 @@ namespace DirectoryMonitoring
         private System.Threading.Timer IntervalTimer;
         public CDNUploadFolderWatcherService()
         {
-    
-            System.Configuration.Configuration config =
-           ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            System.Configuration.AppSettingsSection appSettings =
-                (System.Configuration.AppSettingsSection)config.GetSection("appSettings");
-            string logfolder = appSettings.Settings["logs"].Value;
-            PathToFolder = appSettings.Settings["watch"].Value;
-            Job.Instance.TooEmail = appSettings.Settings["Sendto"].Value;
+
+            string logfolder = "c:\\logs";
+            PathToFolder = "c:\\test";
+            Job.Instance.TooEmail = "lasiewicz@gmail.com";
             Log.Instance.LogPath = @logfolder;
             Log.Instance.LogFileName = "CNDUploadFolderWatcher";
-            Job.Instance.Jobsdir = appSettings.Settings["jobs"].Value;
-            Job.Instance.logdir = logfolder;
-            Watcher = new MyFileSystemWatcher(PathToFolder);
+            Job.Instance.Jobsdir = "c:\\jobs";
+            Job.Instance.logdir = "c:\\logs";
+            try
+            {
+                System.Configuration.Configuration config =
+               ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                System.Configuration.AppSettingsSection appSettings =
+                    (System.Configuration.AppSettingsSection)config.GetSection("appSettings");
+                logfolder = appSettings.Settings["logs"].Value;
+                PathToFolder = appSettings.Settings["watch"].Value;
+                Job.Instance.TooEmail = appSettings.Settings["Sendto"].Value;
+                Log.Instance.LogPath = @logfolder;
+                Log.Instance.LogFileName = "CNDUploadFolderWatcher";
+                Job.Instance.Jobsdir = appSettings.Settings["jobs"].Value;
+                Job.Instance.logdir = logfolder;
+                Watcher = new MyFileSystemWatcher(PathToFolder);
+            }
+            catch (Exception ex)
+            {
+                Log.WriteLine(ex.ToString());
+            }
+
            
         }
 
         protected override void OnStart(string[] args)
         {
-            IntervalTimer = new System.Threading.Timer(new System.Threading.TimerCallback(IntervalTimer_Elapsed), null, 60000, 60000);
-           // Log.WriteLine("start");
-            Job.Instance.CreateNewNum();
+            try
+            {
+                IntervalTimer = new System.Threading.Timer(new System.Threading.TimerCallback(IntervalTimer_Elapsed), null, 60000, 60000);
+                // Log.WriteLine("start");
+                Job.Instance.CreateNewNum();
+            }
+            catch (Exception ex)
+            {
+                Log.WriteLine(ex.ToString());
+            }
+        
         }
 
         protected override void OnStop()

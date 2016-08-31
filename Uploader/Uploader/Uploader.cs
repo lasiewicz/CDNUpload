@@ -74,7 +74,11 @@ namespace Uploader
         {
 
         }
-       
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Ftpstuff.Instance.test();
+        }
     }
 }
 

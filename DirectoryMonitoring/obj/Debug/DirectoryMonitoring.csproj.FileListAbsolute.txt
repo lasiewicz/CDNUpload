@@ -16,3 +16,12 @@ C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csproj.
 C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CDNUploadFolderWatcher.exe
 C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CDNUploadFolderWatcher.pdb
 C:\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.CDNUploadFolderWatcherService.resources
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CDNUploadFolderWatcher.exe.config
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CDNUploadFolderWatcher.exe
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\CDNUploadFolderWatcher.pdb
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CDNUploadFolderWatcher.exe
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\bin\Debug\CDNUploadFolderWatcher.pdb
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csprojResolveAssemblyReference.cache
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.ProjectInstaller.resources
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.CDNUploadFolderWatcherService.resources
+C:\Users\lasiewiw\Desktop\x\DirectoryMonitoring\DirectoryMonitoring\obj\Debug\DirectoryMonitoring.csproj.GenerateResource.Cache
