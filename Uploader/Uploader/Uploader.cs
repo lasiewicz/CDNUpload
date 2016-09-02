@@ -43,7 +43,7 @@ namespace Uploader
             Ftpstuff.Instance.TooEmail = appSettings.Settings["Sendto"].Value;
             Ftpstuff.Instance.jobroot = appSettings.Settings["jobs"].Value;
             Ftpstuff.Instance.searchroot = appSettings.Settings["searchroot"].Value;
-
+            Ftpstuff.Instance.ftptype = appSettings.Settings["ftptype"].Value;
 
 
             if (args.Length ==2)
@@ -61,8 +61,8 @@ namespace Uploader
                 Ftpstuff.Instance.jobnumber = args[1];
                 Ftpstuff.Instance.getjob(true);
             }
-            
 
+            //Application.Exit();
         }
 
 
