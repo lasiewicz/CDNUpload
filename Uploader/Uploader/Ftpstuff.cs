@@ -23,6 +23,7 @@ namespace Uploader
         public string jobroot;
         public string ftptype;
         public BMail MailObject = new BMail();
+        public string PrivateKeyPath;
 
         public void test()
         {
@@ -125,12 +126,12 @@ namespace Uploader
                         {
                             sessionOptions = new SessionOptions
                             {
-                                Protocol = Protocol.Ftp,
+                                Protocol = Protocol.Sftp,
                                 HostName = Ftpstuff.Instance.Host,
                                 UserName = Ftpstuff.Instance.Login,
                                 Password = Ftpstuff.Instance.Password,
                                 SshHostKeyFingerprint = "ssh-dss 1024 ee:33:bd:ac:7b:6e:bd:0b:60:6e:49:20:56:cb:00:d3",
-                                SshPrivateKeyPath = "C:\\Users\\lasiewiw\\Desktop\\deluxe_xfer_putty_priv.ppk"
+                                SshPrivateKeyPath = Ftpstuff.Instance.PrivateKeyPath
                             };
                         }
                         else
@@ -153,9 +154,20 @@ namespace Uploader
                             {
                                 try
                                 {
-                                    session.Open(sessionOptions);
+                                    try
+                                    {
+                                        session.Open(sessionOptions);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Log.WriteLine(ex.ToString());
+                                        Log.WriteLine("Could not open sesson");
+                                       
+                                    }
+
 
                                     // Upload files
+
                                     TransferOptions transferOptions = new TransferOptions();
                                     transferOptions.TransferMode = TransferMode.Binary;
 

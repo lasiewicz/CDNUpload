@@ -31,20 +31,29 @@ namespace Uploader
             string[] args = Environment.GetCommandLineArgs();
             Log.Instance.LogFileName = "FileCompare";
 
-
-            System.Configuration.Configuration config =
+            try
+            {
+                System.Configuration.Configuration config =
             ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             System.Configuration.AppSettingsSection appSettings =
                 (System.Configuration.AppSettingsSection)config.GetSection("appSettings");
-            Log.Instance.LogPath = appSettings.Settings["logs"].Value;
-            Ftpstuff.Instance.Login = appSettings.Settings["login"].Value;
-            Ftpstuff.Instance.Password= appSettings.Settings["password"].Value;
-            Ftpstuff.Instance.Host = appSettings.Settings["host"].Value;
-            Ftpstuff.Instance.TooEmail = appSettings.Settings["Sendto"].Value;
-            Ftpstuff.Instance.jobroot = appSettings.Settings["jobs"].Value;
-            Ftpstuff.Instance.searchroot = appSettings.Settings["searchroot"].Value;
-            Ftpstuff.Instance.ftptype = appSettings.Settings["ftptype"].Value;
-
+            
+                Log.Instance.LogPath = appSettings.Settings["logs"].Value;
+                Ftpstuff.Instance.Login = appSettings.Settings["login"].Value;
+                Ftpstuff.Instance.Password = appSettings.Settings["password"].Value;
+                Ftpstuff.Instance.Host = appSettings.Settings["host"].Value;
+                Ftpstuff.Instance.TooEmail = appSettings.Settings["Sendto"].Value;
+                Ftpstuff.Instance.jobroot = appSettings.Settings["jobs"].Value;
+                Ftpstuff.Instance.searchroot = appSettings.Settings["searchroot"].Value;
+                Ftpstuff.Instance.ftptype = appSettings.Settings["ftptype"].Value;
+                Ftpstuff.Instance.PrivateKeyPath = appSettings.Settings["PrivateKeyPath"].Value;
+            }
+            catch (Exception e1)
+            {
+                Console.WriteLine("Error: {0}", e1);
+                Log.Instance.WriteLineToLog(e.ToString());
+                //  return 1;
+            }
 
             if (args.Length ==2)
 
@@ -52,6 +61,7 @@ namespace Uploader
                 Log.Instance.LogFileName = "CNDUploader";
                 Ftpstuff.Instance.jobnumber = args[1];
                 Ftpstuff.Instance.getjob(false);
+                Application.Exit();
             }
 
             if (args.Length == 3)
@@ -60,9 +70,10 @@ namespace Uploader
                 Log.Instance.LogFileName = "FileCompare";
                 Ftpstuff.Instance.jobnumber = args[1];
                 Ftpstuff.Instance.getjob(true);
+                Application.Exit();
             }
-
-            //Application.Exit();
+        
+        
         }
 
 
