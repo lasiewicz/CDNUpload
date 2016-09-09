@@ -119,7 +119,7 @@ namespace Uploader
                             }
                         }
                         Log.Instance.WriteLineToLog("Starting file " + Cppath);
-                        string containdir = Cppath.Substring(0, t);
+                        string containdir = Cppath.Substring(0, t-1);
                         SessionOptions sessionOptions;
                         bool areEqual = String.Equals(Ftpstuff.Instance.ftptype, "SCP", StringComparison.Ordinal);
                         if (areEqual)
@@ -165,6 +165,40 @@ namespace Uploader
                                        
                                     }
 
+                                    // check directories
+                                    bool folderexists = false;
+                                    folderexists = session.FileExists(containdir);
+                                    if (folderexists == false)
+                                    {
+                                        for (t = 2; t < containdir.Length; t++)
+                                        {
+                                            string ch = containdir.Substring(t, 1);
+                                            bool sareEqual = String.Equals(ch, "/", StringComparison.Ordinal);
+                                            if (sareEqual)
+                                            {
+                                                string nfolder = containdir.Substring(0, t);
+                                                try
+                                                {
+
+                                                    folderexists = session.FileExists(nfolder);
+                                                }
+                                                catch
+                                                {
+
+                                                }
+                                                if (folderexists == false)
+                                                {
+
+                                                    session.CreateDirectory(nfolder);
+                                                    Log.Instance.WriteLineToLog("created directory " + containdir);
+                                                }
+
+                                            }
+
+                                        }
+                                        session.CreateDirectory(containdir);
+                                        Log.Instance.WriteLineToLog("created directory " + containdir);
+                                      }
 
                                     // Upload files
 
@@ -187,22 +221,7 @@ namespace Uploader
                                 }
                                 catch
                                 {
-                                    Log.Instance.WriteLineToLog("took a while for " + Cppath);
-                                    bool folderexists = false;
-                                    try
-                                    {
-                                        folderexists = session.FileExists(containdir);
-                                    }
-                                    catch
-                                    {
-
-                                    }
-                                    if (folderexists == false)
-                                    {
-
-                                        Log.Instance.WriteLineToLog("created directory " + containdir);
-                                        session.CreateDirectory(containdir);
-                                    }
+                                 
 
                                     bool fileexists = session.FileExists(Cppath);
                                     if (fileexists == false)
@@ -234,20 +253,30 @@ namespace Uploader
                       
                             if (compare == true)
                             {
-                                session.Open(sessionOptions);
-                                long ftpfile = session.GetFileInfo(Cppath).Length;
-                                FileInfo fInfo = new FileInfo(Jobfiles.Instance.fnames[x]);
-                                long size = fInfo.Length;
-                                if (size == ftpfile)
+                                try
                                 {
-                                    Log.Instance.WriteLineToLog("file compare successful for " + Cppath);
-                                    fc = fc + "successful for " + Cppath + (char)13;
+                                    session.Open(sessionOptions);
+                                    long ftpfile = session.GetFileInfo(Cppath).Length;
+                                    FileInfo fInfo = new FileInfo(Jobfiles.Instance.fnames[x]);
+                                    long size = fInfo.Length;
+                                    if (size == ftpfile)
+                                    {
+                                        Log.Instance.WriteLineToLog("file compare successful for " + Cppath);
+                                        fc = fc + "successful for " + Cppath + (char)13;
+                                    }
+                                    else
+                                    {
+                                        Log.Instance.WriteLineToLog("file compare NOT successful for " + Cppath);
+                                        fc = fc + "NOT successful file compare for " + Cppath + (char)13;
+                                        unsuccfilecompare++;
+                                    }
                                 }
-                                else
+                                catch
                                 {
                                     Log.Instance.WriteLineToLog("file compare NOT successful for " + Cppath);
                                     fc = fc + "NOT successful file compare for " + Cppath + (char)13;
                                     unsuccfilecompare++;
+
                                 }
                             }
                         }
@@ -277,19 +306,24 @@ namespace Uploader
                 string Mes = "";
                 if (unsuccfilecompare > 0)
                 {
-                    subject = "Error with job" + jobnumber;
-                    Mes = " job " + jobnumber + +(char)13;
-                    Mes = Mes + "file compare follows " + (char)13;
-                    Mes = Mes + fc;
+                    subject = "Job " + jobnumber + " Error in running file compare" + (char)13;
+                    Mes = unsuccfilecompare.ToString() + " errors in file compare";
+                   // Mes = " job " + jobnumber + +(char)13;
+                   // Mes = Mes + "file compare follows " + (char)13;
+                  //  Mes = Mes + fc;
+                
                 }
                 else
                 {
-                    subject = jobnumber;
-                    Mes = " job " + jobnumber + +(char)13;
-                    Mes = Mes + "file compare follows " + (char)13;
-                    Mes = Mes + fc;
+                    subject = " File compare report for " + jobnumber + " is perfect" + (char)13;
+                    Mes =  jobnumber + " is complete"+(char)13;
+                  //  Mes = Mes + "file compare follows " + (char)13 + "              " + (char)13;
+                   // Mes = Mes + fc;
                 }
-                string test = MailObject.SendEmail(TooEmail, subject, Mes);
+                Log.Instance.WriteLineToLog(subject);
+                Log.Instance.WriteLineToLog(Mes);
+                Log.Instance.WriteLineToLog("Done");
+                // string test = MailObject.SendEmail(TooEmail, subject, Mes);
             }
 
         }

@@ -20,3 +20,15 @@ C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\bin\Debug\Syst
 C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\bin\Debug\System.Net.FtpClient.xml
 C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.exe
 C:\Users\lasiewiw\Downloads\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.pdb
+C:\DirectoryMonitoring\Uploader\Uploader\bin\Debug\Uploader.exe.config
+C:\DirectoryMonitoring\Uploader\Uploader\bin\Debug\Uploader.exe
+C:\DirectoryMonitoring\Uploader\Uploader\bin\Debug\Uploader.pdb
+C:\DirectoryMonitoring\Uploader\Uploader\bin\Debug\System.Net.FtpClient.dll
+C:\DirectoryMonitoring\Uploader\Uploader\bin\Debug\WinSCPnet.dll
+C:\DirectoryMonitoring\Uploader\Uploader\bin\Debug\System.Net.FtpClient.xml
+C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.csprojResolveAssemblyReference.cache
+C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.Uploader.resources
+C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.Properties.Resources.resources
+C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.csproj.GenerateResource.Cache
+C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.exe
+C:\DirectoryMonitoring\Uploader\Uploader\obj\Debug\Uploader.pdb

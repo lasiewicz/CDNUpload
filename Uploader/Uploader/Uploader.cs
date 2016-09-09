@@ -19,7 +19,7 @@ namespace Uploader
         {
 
             Ftpstuff.Instance.jobnumber = jobtextbox.Text;
-            Ftpstuff.Instance.getjob(false);
+            Ftpstuff.Instance.getjob(true);
             Application.Exit();
 
         }
@@ -72,8 +72,8 @@ namespace Uploader
                 Ftpstuff.Instance.getjob(true);
                 Application.Exit();
             }
-        
-        
+           // Application.Exit();
+
         }
 
 

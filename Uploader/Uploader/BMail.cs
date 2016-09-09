@@ -5,7 +5,7 @@ public class BMail
     public string SendEmail(string toAddress, string subject, string body)
     {
         string result = "Message Sent Successfully..!!";
-        string senderID = "DeluxeJenkins@gmail.com";// use sender’s email id here..
+        string senderID = "DeluxeMediaWrap@gmail.com";// use sender’s email id here..
         const string senderPassword = "deluxemedia"; // sender password here…
         try
         {
@@ -18,6 +18,7 @@ public class BMail
                 Credentials = new System.Net.NetworkCredential(senderID, senderPassword),
                 Timeout = 30000,
             };
+     
             MailMessage message = new MailMessage(senderID, toAddress, subject, body);
             smtp.Send(message);
         }
