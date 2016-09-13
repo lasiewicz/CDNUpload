@@ -302,7 +302,7 @@ namespace Uploader
             }
             if (compare == true)
             {
-                subject = "Upload for job" + jobnumber;
+               // subject = "Upload for job" + jobnumber;
                 string Mes = "";
                 if (unsuccfilecompare > 0)
                 {
@@ -317,8 +317,9 @@ namespace Uploader
                 {
                     subject = " File compare report for " + jobnumber + " is perfect" + (char)13;
                     Mes =  jobnumber + " is complete"+(char)13;
-                  //  Mes = Mes + "file compare follows " + (char)13 + "              " + (char)13;
-                   // Mes = Mes + fc;
+                    Log.Instance.WriteLineToLog(subject);
+                    //  Mes = Mes + "file compare follows " + (char)13 + "              " + (char)13;
+                    // Mes = Mes + fc;
                 }
                 Log.Instance.WriteLineToLog(subject);
                 Log.Instance.WriteLineToLog(Mes);
